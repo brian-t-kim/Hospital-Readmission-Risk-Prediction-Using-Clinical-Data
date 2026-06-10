@@ -47,6 +47,11 @@ To build a predictive model that identifies patients at higher risk of 30-day re
 - Performance measured using ROC curve analysis
 - AUC used to evaluate discriminatory ability of the model
 
+## 📈 ROC Curve
+
+The model’s performance was evaluated using a Receiver Operating Characteristic (ROC) curve, which illustrates the tradeoff between sensitivity and specificity.
+
+![ROC Curve](outputs/plots/roc_curve.png)
 ---
 
 ## 🧠 Key Findings
