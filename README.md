@@ -51,7 +51,7 @@ To build a predictive model that identifies patients at higher risk of 30-day re
 
 The model’s performance was evaluated using a Receiver Operating Characteristic (ROC) curve, which illustrates the tradeoff between sensitivity and specificity.
 
-![ROC Curve](outputs/plots/roc_curve.png)
+![ROC Curve](outputs/plots/ROC_Curve.png)
 ---
 
 ## 🧠 Key Findings
