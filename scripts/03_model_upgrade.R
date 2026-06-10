@@ -55,7 +55,7 @@ exp(coef(model2))
 # Confusion Matrix 
 pred_probs <- predict(model2, type = "response")
 pred_class <- ifelse(pred_probs > 0.5, 1, 0)
-
+model_data <- model2$model
 table(
   Predicted = pred_class,
   Actual = model_data$readmit_30
@@ -65,7 +65,7 @@ table(
 install.packages("pROC")
 library(pROC)
 
-model_data <- model2$model
+
 pred_probs <- predict(model2, type = "response")
 roc_obj <- roc(model_data$readmit_30, pred_probs)
 auc(roc_obj)
@@ -75,8 +75,9 @@ roc_obj <- roc(model_data$readmit_30, pred_probs)
 
 plot(roc_obj, col = "blue", lwd = 3, main = "ROC Curve - Readmission Model")
 abline(a = 0, b = 1, lty = 2, col = "gray")
+dev.off()
 
-ggsave("outputs/plots/ROC_Curve.png")
+ggsave("outputs/plots/roc_curve.png")
 
 auc(roc_obj)
 
